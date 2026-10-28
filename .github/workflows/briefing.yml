@@ -1,0 +1,46 @@
+name: Morning Briefing
+
+on:
+  schedule:
+    # GitHub cron is always UTC.
+    - cron: "30 1 * * *"  # 07:00 IST: main trigger
+    - cron: "30 9 * * *"  # 15:00 IST: safety net, exits quietly if already delivered
+  # Adds a "Run workflow" button in the Actions tab for manual testing.
+  workflow_dispatch:
+
+# Lets the job commit the bookmark file back to the repo.
+permissions:
+  contents: write
+
+# If two runs ever overlap, queue them instead of racing on the bookmark.
+concurrency:
+  group: briefing
+
+jobs:
+  briefing:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run briefing
+        env:
+          # Secrets for later layers (add in repo Settings > Secrets):
+          # ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TRIGGER_SOURCE: ${{ github.event_name }}
+
+      # The runner is thrown away after this job, so the bookmark must be
+      # committed back to the repo or it would be forgotten.
+      - name: Save bookmark
+        run: |
+          if [ -n "$(git status --porcelain state/)" ]; then
+            git config user.name "briefing-bot"
+            git config user.email "briefing-bot@users.noreply.github.com"
+            git add state/last-edition.json
+            git commit -m "bookmark: last briefed edition"
+            git push
+          fi
