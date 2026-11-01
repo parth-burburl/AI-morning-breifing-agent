@@ -1,30 +1,25 @@
 // Entry point. Both daily triggers start this same file.
-// Step 1 asks "anything new?". If not, exit quietly. If so, run the pipeline.
+// trigger -> gather -> filter -> synthesise -> deliver
+// Step 1 asks "anything new?". If not, exit quietly.
 
-import { checkForNewEdition, saveBookmark, type TriggerResult } from "./trigger.js";
-
-type Item = { title: string; url: string; source: string };
+import { checkForNewEditions, saveBookmark } from "./trigger.js";
+import { gather } from "./gather.js";
+import { filterStories, loadProfile, type Scored } from "./filter.js";
+import { loadDelivered, markDelivered } from "./seen.js";
 
 // --- Layer stubs: we'll fill these in one by one ---------------------------
 
-async function gather(_t: TriggerResult): Promise<Item[]> {
-  // Next up: fetch every edition after `_t.since` up to `_t.edition.date`.
-  return [];
-}
-
-function filter(items: Item[]): Item[] {
-  // Plain code, no LLM: dedupe, keyword rules.
-  return items;
-}
-
-async function synthesise(items: Item[]): Promise<string> {
-  // The only place an LLM may be used, to keep token cost low.
-  return items.map((i) => `- ${i.title} (${i.source})\n  ${i.url}`).join("\n");
+async function synthesise(selected: Scored[]): Promise<string> {
+  // Next layer. The only place an LLM may be used, to keep token cost low.
+  // For now: a plain numbered list so we can see what the filter picked.
+  return selected
+    .map((s, i) => `${i + 1}. [${s.lens}] ${s.story.title} (${s.story.edition})\n   ${s.story.url}`)
+    .join("\n");
 }
 
 async function deliver(briefing: string): Promise<void> {
   // For now, just print. Later: email.
-  console.log(briefing || "(no items yet)");
+  console.log(briefing || "(nothing relevant in these editions)");
 }
 
 // --- Pipeline ---------------------------------------------------------------
@@ -34,20 +29,32 @@ async function main() {
   const nowIst = new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
   console.log(`Started via "${source}" at ${nowIst} IST`);
 
-  const trigger = await checkForNewEdition();
+  const trigger = await checkForNewEditions();
   if (!trigger) {
     console.log("Nothing new since last briefing. Exiting quietly.");
     return;
   }
 
-  const items = await gather(trigger);
-  const briefing = await synthesise(filter(items));
+  const stories = await gather(trigger);
+
+  const profile = await loadProfile();
+  const result = filterStories(stories, profile, await loadDelivered());
+  const s = result.stats;
+  console.log(
+    `Filter: ${s.gathered} gathered, ${s.duplicatesRemoved} duplicates, ${s.alreadyDelivered} already delivered, ` +
+      `${s.avoided} avoided, ${result.noMatch.length} no keyword match -> ${result.selected.length} selected`,
+  );
+
+  const briefing = await synthesise(result.selected);
   await deliver(briefing);
 
-  // Only move the bookmark AFTER delivery succeeded. If anything above throws,
-  // the bookmark stays put and the next trigger retries the same edition.
-  await saveBookmark(trigger.edition.date);
-  console.log(`Bookmark moved to ${trigger.edition.date}. Done.`);
+  // Only AFTER delivery succeeded: move the bookmark and remember what we sent.
+  // If anything above throws, nothing is saved and the next trigger retries.
+  const newest = trigger.editions.at(-1)!.date;
+  const today = new Date().toLocaleDateString("en-CA", { timeZone: "Asia/Kolkata" }); // YYYY-MM-DD
+  await markDelivered(result.selected.map((x) => x.story.url), today);
+  await saveBookmark(newest);
+  console.log(`Bookmark moved to ${newest}. Done.`);
 }
 
 main().catch((err) => {

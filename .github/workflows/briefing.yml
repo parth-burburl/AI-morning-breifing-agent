@@ -8,11 +8,11 @@ on:
   # Adds a "Run workflow" button in the Actions tab for manual testing.
   workflow_dispatch:
 
-# Lets the job commit the bookmark file back to the repo.
+# Lets the job commit the state files back to the repo.
 permissions:
   contents: write
 
-# If two runs ever overlap, queue them instead of racing on the bookmark.
+# If two runs ever overlap, queue them instead of racing on the state files.
 concurrency:
   group: briefing
 
@@ -33,14 +33,14 @@ jobs:
           # ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           TRIGGER_SOURCE: ${{ github.event_name }}
 
-      # The runner is thrown away after this job, so the bookmark must be
-      # committed back to the repo or it would be forgotten.
-      - name: Save bookmark
+      # The runner is thrown away after this job, so the state (bookmark + links
+      # already delivered) must be committed back to the repo or it is forgotten.
+      - name: Save state
         run: |
           if [ -n "$(git status --porcelain state/)" ]; then
             git config user.name "briefing-bot"
             git config user.email "briefing-bot@users.noreply.github.com"
-            git add state/last-edition.json
-            git commit -m "bookmark: last briefed edition"
+            git add state/
+            git commit -m "state: bookmark and delivered links"
             git push
           fi

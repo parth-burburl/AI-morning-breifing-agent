@@ -4,7 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "briefing": "tsx src/index.ts"
+    "briefing": "tsx src/index.ts",
+    "export": "tsx src/export.ts",
+    "preview": "tsx src/preview.ts"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",

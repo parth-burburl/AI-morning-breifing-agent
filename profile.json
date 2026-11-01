@@ -1,0 +1,64 @@
+{
+  "goal": "Understand the economics of GenAI and AI across every layer, from semiconductors to applications. Find opportunities to build AI startups. Know enough to talk with any AI expert or beginner.",
+  "_how_to_edit": "Keywords are lowercase words or short phrases. A story is scored against every lens, and each lens gets a quota of the final stories. Add words you want, delete noisy ones. 'avoid' words drop a story if they appear in its TITLE.",
+  "settings": {
+    "totalStories": 10,
+    "perLensQuota": 2
+  },
+  "fieldWeights": {
+    "title": 3,
+    "whyRead": 2,
+    "body": 1
+  },
+  "lenses": [
+    {
+      "name": "Chips and memory",
+      "keywords": [
+        "gpu", "tpu", "npu", "asic", "accelerator", "semiconductor", "chip", "silicon",
+        "hbm", "dram", "sram", "memory bandwidth", "memory latency", "cxl", "nvlink",
+        "interconnect", "nvidia", "blackwell", "amd", "tsmc", "wafer", "cuda", "rocm",
+        "performance per watt", "inference chip", "datacenter", "data center",
+        "cerebras", "groq", "tenstorrent", "apple silicon", "hardware"
+      ]
+    },
+    {
+      "name": "Serving and cost economics",
+      "keywords": [
+        "cost", "cheaper", "price", "pricing", "economics", "economic", "per token",
+        "cost per token", "throughput", "latency", "utilization", "inference", "serving",
+        "vllm", "sglang", "kv cache", "batching", "quantization", "gpu cluster",
+        "self hosting", "self hosted", "open weight", "scaling", "capacity", "energy",
+        "power", "cloud", "tco", "margin"
+      ]
+    },
+    {
+      "name": "Models and training",
+      "keywords": [
+        "training", "pretraining", "post training", "fine tuning", "distillation",
+        "reinforcement learning", "scaling law", "mixture of experts", "moe", "transformer",
+        "diffusion", "reasoning", "frontier model", "llm", "language model", "benchmark",
+        "context window", "tokenization", "synthetic data", "dataset", "attention",
+        "parameter", "open weight", "compute"
+      ]
+    },
+    {
+      "name": "Applications and agents",
+      "keywords": [
+        "agent", "agentic", "coding agent", "mcp", "tool calling", "workflow", "harness",
+        "copilot", "assistant", "enterprise", "adoption", "productivity", "automation",
+        "rag", "retrieval", "product", "sandbox", "evaluation", "orchestration",
+        "multi agent", "multiagent"
+      ]
+    },
+    {
+      "name": "Market and startup signals",
+      "keywords": [
+        "startup", "funding", "valuation", "revenue", "market", "business model", "moat",
+        "competition", "acquisition", "commoditization", "opportunity", "demand", "supply",
+        "regulation", "export control", "open source", "pricing", "economics", "adoption",
+        "investment", "customers"
+      ]
+    }
+  ],
+  "avoid": []
+}
