@@ -6,11 +6,16 @@
   "scripts": {
     "briefing": "tsx src/index.ts",
     "export": "tsx src/export.ts",
-    "preview": "tsx src/preview.ts"
+    "preview": "tsx src/preview.ts",
+    "mailtest": "tsx src/mailtest.ts"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
+    "@types/nodemailer": "^6.4.24",
     "tsx": "^4.19.0",
     "typescript": "^5.6.0"
+  },
+  "dependencies": {
+    "nodemailer": "^10.3.1"
   }
 }

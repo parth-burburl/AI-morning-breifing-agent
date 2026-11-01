@@ -8,14 +8,22 @@ import { filterStories, loadProfile, type Scored } from "./filter.js";
 import { loadDelivered, markDelivered } from "./seen.js";
 import { loadDotEnv } from "./env.js";
 import { synthesise, renderText, renderPlain } from "./synthesise.js";
+import { readMailConfig, renderHtml, renderPlainHtml, renderEmptyHtml, sendEmail, type Mail } from "./deliver.js";
 
 loadDotEnv(); // local runs read .env; the cloud uses repo Secrets
 
 // --- Layer stub: delivery comes next -----------------------------------------
 
-async function deliver(briefing: string): Promise<void> {
-  // For now, just print. Later: email.
-  console.log(briefing || "(nothing relevant in these editions)");
+async function deliver(mail: Mail): Promise<void> {
+  const cfg = readMailConfig();
+  if (cfg) {
+    await sendEmail(cfg, mail); // throws on failure, so nothing below is saved
+    console.log(`Emailed "${mail.subject}" to ${cfg.to}`); // the text is not printed: cloud logs can be public
+    return;
+  }
+  if (process.env.GITHUB_ACTIONS) throw new Error("SMTP_USER / SMTP_PASS / MAIL_TO are not set in repo Secrets.");
+  console.warn("SMTP not configured: printing instead of emailing.");
+  console.log(mail.text);
 }
 
 // --- Pipeline ---------------------------------------------------------------
@@ -43,8 +51,17 @@ async function main() {
 
   const note = await synthesise(result.selected, profile);
   const dateLabel = new Date().toLocaleDateString("en-GB", { timeZone: "Asia/Kolkata", weekday: "long", day: "numeric", month: "long", year: "numeric" });
-  const briefing = note ? renderText(note, result.selected, dateLabel) : renderPlain(result.selected);
-  await deliver(briefing);
+  const subject = `Morning Briefing · ${dateLabel}`;
+  let mail: Mail;
+  if (result.selected.length === 0) {
+    const text = `Nothing relevant today: ${result.stats.gathered} stories checked, none matched your goal.`;
+    mail = { subject: `${subject} · nothing relevant`, text, html: renderEmptyHtml(dateLabel, result.stats.gathered) };
+  } else if (note) {
+    mail = { subject, text: renderText(note, result.selected, dateLabel), html: renderHtml(note, result.selected, dateLabel) };
+  } else {
+    mail = { subject: `${subject} · plain list`, text: renderPlain(result.selected), html: renderPlainHtml(result.selected, dateLabel) };
+  }
+  await deliver(mail);
 
   // Only AFTER delivery succeeded: move the bookmark and remember what we sent.
   // If anything above throws, nothing is saved and the next trigger retries.
