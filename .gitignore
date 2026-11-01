@@ -4,3 +4,5 @@ node_modules
 gathered.md
 filtered.md
 .env
+
+email-preview.html
