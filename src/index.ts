@@ -6,16 +6,12 @@ import { checkForNewEditions, saveBookmark } from "./trigger.js";
 import { gather } from "./gather.js";
 import { filterStories, loadProfile, type Scored } from "./filter.js";
 import { loadDelivered, markDelivered } from "./seen.js";
+import { loadDotEnv } from "./env.js";
+import { synthesise, renderText, renderPlain } from "./synthesise.js";
 
-// --- Layer stubs: we'll fill these in one by one ---------------------------
+loadDotEnv(); // local runs read .env; the cloud uses repo Secrets
 
-async function synthesise(selected: Scored[]): Promise<string> {
-  // Next layer. The only place an LLM may be used, to keep token cost low.
-  // For now: a plain numbered list so we can see what the filter picked.
-  return selected
-    .map((s, i) => `${i + 1}. [${s.lens}] ${s.story.title} (${s.story.edition})\n   ${s.story.url}`)
-    .join("\n");
-}
+// --- Layer stub: delivery comes next -----------------------------------------
 
 async function deliver(briefing: string): Promise<void> {
   // For now, just print. Later: email.
@@ -45,7 +41,9 @@ async function main() {
       `${s.avoided} avoided, ${result.noMatch.length} no keyword match -> ${result.selected.length} selected`,
   );
 
-  const briefing = await synthesise(result.selected);
+  const note = await synthesise(result.selected, profile);
+  const dateLabel = new Date().toLocaleDateString("en-GB", { timeZone: "Asia/Kolkata", weekday: "long", day: "numeric", month: "long", year: "numeric" });
+  const briefing = note ? renderText(note, result.selected, dateLabel) : renderPlain(result.selected);
   await deliver(briefing);
 
   // Only AFTER delivery succeeded: move the bookmark and remember what we sent.

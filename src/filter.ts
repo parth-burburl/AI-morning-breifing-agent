@@ -14,6 +14,7 @@ export type Lens = { name: string; keywords: string[] };
 
 export type Profile = {
   goal: string;
+  about: string; // who the reader is; only the synthesise step uses it
   settings: { totalStories: number; perLensQuota: number };
   fieldWeights: { title: number; whyRead: number; body: number };
   lenses: Lens[];
@@ -66,6 +67,7 @@ export async function loadProfile(path = "profile.json"): Promise<Profile> {
 
   return {
     goal: String(raw.goal ?? ""),
+    about: String(raw.about ?? ""),
     settings: { totalStories: total, perLensQuota: quota },
     fieldWeights: {
       title: raw.fieldWeights?.title ?? 3,
