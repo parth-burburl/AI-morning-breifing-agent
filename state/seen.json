@@ -29,6 +29,16 @@
     "github.com/hari-kancharla/sdcguard": "2026-11-03",
     "arxiv.org/abs/2610.34722": "2026-11-03",
     "pbb.sh/research/agentic-backdoor": "2026-11-03",
-    "github.com/indexable-inc/blaze": "2026-11-03"
+    "github.com/indexable-inc/blaze": "2026-11-03",
+    "namespace.so/blog/mac-at-any-scale": "2026-11-04",
+    "llamaindex.ai/blog/the-inference-stack-behind-ocria": "2026-11-04",
+    "github.com/hscspring/post-training-atlas": "2026-11-04",
+    "github.com/maddog107/av1gpu": "2026-11-04",
+    "metaview.ai/resources/blog/how-we-built-one-harness-for-every-metaview-agent": "2026-11-04",
+    "github.com/lokadb/lokadb": "2026-11-04",
+    "sf-tensor.com/engineering/formalizing-ptx": "2026-11-04",
+    "commandline.microsoft.com/how-we-built-copilot-cowork-python-to-rust-migration": "2026-11-04",
+    "arxiv.org/abs/2609.13285": "2026-11-04",
+    "github.com/yiteng-chen/neurolume": "2026-11-04"
   }
 }
