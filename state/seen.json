@@ -39,6 +39,16 @@
     "sf-tensor.com/engineering/formalizing-ptx": "2026-11-04",
     "commandline.microsoft.com/how-we-built-copilot-cowork-python-to-rust-migration": "2026-11-04",
     "arxiv.org/abs/2609.13285": "2026-11-04",
-    "github.com/yiteng-chen/neurolume": "2026-11-04"
+    "github.com/yiteng-chen/neurolume": "2026-11-04",
+    "mindstudio.ai/blog/linux-nvidia-rtx-spark-laptop": "2026-11-05",
+    "huggingface.co/moonshotai/kimi-k3.1-pro": "2026-11-05",
+    "runanywhere.ai/blog/glm-5-3-flash-trainium2-nki-megakernels": "2026-11-05",
+    "arxiv.org/abs/2611.04169": "2026-11-05",
+    "cleric.ai/blog/how-we-made-evals-100x-cheaper-with-multi-agent-architecture": "2026-11-05",
+    "github.com/microsoft/tokeneconomizer": "2026-11-05",
+    "alphaxiv.org/abs/2611.mistral-large-4": "2026-11-05",
+    "streamvessel.com/blog/mcp-trusted-redirect-uris": "2026-11-05",
+    "blog.mcdview.dev/en/dolibarr-glpi-prestashop-fifteen-years-of-schema": "2026-11-05",
+    "github.com/lz4/lz4/releases/tag/v1.11.0": "2026-11-05"
   }
 }
