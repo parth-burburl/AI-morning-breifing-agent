@@ -59,6 +59,16 @@
     "buoyant.io/blog/distributed-inference-benchmarks-kinference-vs-plain-kubernetes": "2026-11-06",
     "github.com/rivet-dev/rivet": "2026-11-06",
     "query.farm/blog/haybarn-2-0": "2026-11-06",
-    "sshhole.com": "2026-11-06"
+    "sshhole.com": "2026-11-06",
+    "github.com/dsx-ai-factory/nvke": "2026-11-07",
+    "frontier.replit.com/sandbox-engine-microvms-part-1": "2026-11-07",
+    "airbnb.tech/ai-ml/frontier-quality-at-1-of-the-cost-a-production-benchmark-of-llm-classifiers": "2026-11-07",
+    "coreauto.com/hitchhikers-guide-to-training-on-compute-islands": "2026-11-07",
+    "tinyfish.ai/blog/lessons-from-building-a-deep-research-system": "2026-11-07",
+    "doubleai.com/research/can-llms-redesign-themselves-as-they-train": "2026-11-07",
+    "devvm.dev": "2026-11-07",
+    "stipend-ai.com/blog/ai-spend-limits-tested": "2026-11-07",
+    "nodeox.com/blog/idle-gpus-waiting-jobs": "2026-11-07",
+    "together.ai/blog/together-compiler-continual-compilation-for-ai-inference": "2026-11-07"
   }
 }
