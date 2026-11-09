@@ -79,6 +79,16 @@
     "opensource.microsoft.com/blog/2026/11/05/accelerate-data-access-for-inference-and-training-with-the-open-source-distributed-accelerator-for-cloud-storage": "2026-11-08",
     "github.com/ggmm82/righaven": "2026-11-08",
     "github.com/impossiblecomputing/jacq": "2026-11-08",
-    "stoppels.ch/tar": "2026-11-08"
+    "stoppels.ch/tar": "2026-11-08",
+    "github.com/synchopate/llama-modchip": "2026-11-09",
+    "github.com/waywardgeek/ensemble": "2026-11-09",
+    "github.com/rikiyat/lm_understand-logs": "2026-11-09",
+    "github.com/dphnai/nf12": "2026-11-09",
+    "slack.engineering/unified-grid-how-we-re-architected-slack-for-our-largest-customers": "2026-11-09",
+    "huggingface.co/blog/harness-hub/harness-adapters": "2026-11-09",
+    "github.com/tinybiggames/vindexllm": "2026-11-09",
+    "amutable.com/blog/systemd-loves-rust": "2026-11-09",
+    "github.com/amsach/maple": "2026-11-09",
+    "amsach.github.io/maple": "2026-11-09"
   }
 }
