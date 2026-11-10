@@ -89,6 +89,16 @@
     "github.com/tinybiggames/vindexllm": "2026-11-09",
     "amutable.com/blog/systemd-loves-rust": "2026-11-09",
     "github.com/amsach/maple": "2026-11-09",
-    "amsach.github.io/maple": "2026-11-09"
+    "amsach.github.io/maple": "2026-11-09",
+    "github.com/omnijev/flide": "2026-11-10",
+    "github.com/samir-sarwar/samir-vllm": "2026-11-10",
+    "programmiere.de/writing/software-vs-model-local-rag": "2026-11-10",
+    "arxiv.org/abs/2608.00325": "2026-11-10",
+    "peachq.org": "2026-11-10",
+    "mitln.github.io/moe-inference-engine": "2026-11-10",
+    "developer.microsoft.com/blog/do-ai-coding-agents-care-about-semver": "2026-11-10",
+    "github.com/davide-troiani/moeshift": "2026-11-10",
+    "redox-os.org/news/virtualized-redox": "2026-11-10",
+    "peng.fyi/post/sysfs-superblock-race": "2026-11-10"
   }
 }
