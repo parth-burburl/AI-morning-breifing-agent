@@ -99,6 +99,16 @@
     "developer.microsoft.com/blog/do-ai-coding-agents-care-about-semver": "2026-11-10",
     "github.com/davide-troiani/moeshift": "2026-11-10",
     "redox-os.org/news/virtualized-redox": "2026-11-10",
-    "peng.fyi/post/sysfs-superblock-race": "2026-11-10"
+    "peng.fyi/post/sysfs-superblock-race": "2026-11-10",
+    "arxiv.org/abs/2611.10866": "2026-11-11",
+    "docs.modelplane.ai/guides/inference-guide": "2026-11-11",
+    "blog.railway.com/p/incident-report-october-security-incident": "2026-11-11",
+    "spellwarden.ai/research/mcp-server-security-2026-11": "2026-11-11",
+    "epoch.ai/publications/inference-performance-index": "2026-11-11",
+    "jamesbox.exe.xyz/artifacts/prepack-revived": "2026-11-11",
+    "pvrlabs.xyz/articles/spring-boot-jdbc-pool-reclaim.html": "2026-11-11",
+    "openathena.ai/blog/marin-535b-architecture": "2026-11-11",
+    "github.com/tensorrails/warmctl": "2026-11-11",
+    "neuracryption.com/research": "2026-11-11"
   }
 }
