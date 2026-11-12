@@ -109,6 +109,16 @@
     "pvrlabs.xyz/articles/spring-boot-jdbc-pool-reclaim.html": "2026-11-11",
     "openathena.ai/blog/marin-535b-architecture": "2026-11-11",
     "github.com/tensorrails/warmctl": "2026-11-11",
-    "neuracryption.com/research": "2026-11-11"
+    "neuracryption.com/research": "2026-11-11",
+    "machinelearning.apple.com/research/faster-retrieval": "2026-11-12",
+    "github.com/huawei-csl/macaq": "2026-11-12",
+    "github.com/tylertms/stela": "2026-11-12",
+    "mvakde.github.io/blog/looped-mdlarc": "2026-11-12",
+    "wiz.io/blog/qubole-cross-account-access-abused-in-the-wild": "2026-11-12",
+    "github.com/tensward/tensward": "2026-11-12",
+    "muhammadraza.me/2026/building-agent-sandbox-python": "2026-11-12",
+    "blog.kate.land/posts/using-voltage-glitching-to-unlock-the-a100": "2026-11-12",
+    "developer.nvidia.com/blog/running-av-reasoning-models-within-onboard-compute-and-latency-limits": "2026-11-12",
+    "depi.security/blog/20261111-backdooring-codex": "2026-11-12"
   }
 }
