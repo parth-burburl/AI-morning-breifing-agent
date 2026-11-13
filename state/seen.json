@@ -119,6 +119,16 @@
     "muhammadraza.me/2026/building-agent-sandbox-python": "2026-11-12",
     "blog.kate.land/posts/using-voltage-glitching-to-unlock-the-a100": "2026-11-12",
     "developer.nvidia.com/blog/running-av-reasoning-models-within-onboard-compute-and-latency-limits": "2026-11-12",
-    "depi.security/blog/20261111-backdooring-codex": "2026-11-12"
+    "depi.security/blog/20261111-backdooring-codex": "2026-11-12",
+    "github.com/erdemozkan/kiln": "2026-11-13",
+    "lesswrong.com/posts/ehkwcdamhwpawezim/llms-can-learn-some-multi-step-reasoning-on-filler-tokens-2": "2026-11-13",
+    "stealthium.io/blog/nvroot": "2026-11-13",
+    "soufraz.com/famous-repos-research": "2026-11-13",
+    "github.com/eon-io/era": "2026-11-13",
+    "akshat57.github.io/blog/population-serving": "2026-11-13",
+    "quesma.com/blog/open-kernel-challenge-top-50-reports": "2026-11-13",
+    "ssd-distill.github.io": "2026-11-13",
+    "beforeyouship.dev/blog/llm-batch-api-pricing": "2026-11-13",
+    "devblogs.microsoft.com/cppblog/c-dynamic-debugging-is-now-generally-available": "2026-11-13"
   }
 }
