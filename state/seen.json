@@ -139,6 +139,16 @@
     "joelniklaus-harness-leaderboard.hf.space": "2026-11-14",
     "blog.comfy.org/p/doubling-llm-token-rates-in-comfyui": "2026-11-14",
     "haddyalchaer.com/jepa": "2026-11-14",
-    "github.com/cloudflare/kitesurf": "2026-11-14"
+    "github.com/cloudflare/kitesurf": "2026-11-14",
+    "developer.nvidia.com/blog/when-one-gpu-isnt-enough-serving-glm-5-3-across-two-nvidia-dgx-stations-with-vllm": "2026-11-15",
+    "github.com/open-geocode-rs/open-geocode": "2026-11-15",
+    "nikita-pavlichenko.com/blog/every-llm-architecture-change": "2026-11-15",
+    "vercel.com/academy/build-ai-agent-harness": "2026-11-15",
+    "digitalocean.com/blog/serving-kimi-k3-inference-engine": "2026-11-15",
+    "cadenya.com/handwritten/agentic-loop-in-temporal": "2026-11-15",
+    "arxiv.org/abs/2305.17493": "2026-11-15",
+    "github.com/aperiodic-io/tparquet": "2026-11-15",
+    "aws.amazon.com/blogs/containers/aws-nitro-sandboxes-hardware-enforced-workload-isolation-on-amazon-eks": "2026-11-15",
+    "github.com/ggml-org/ggml/releases/tag/v1.0.0": "2026-11-15"
   }
 }
