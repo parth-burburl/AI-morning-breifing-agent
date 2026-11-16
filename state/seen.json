@@ -149,6 +149,16 @@
     "arxiv.org/abs/2305.17493": "2026-11-15",
     "github.com/aperiodic-io/tparquet": "2026-11-15",
     "aws.amazon.com/blogs/containers/aws-nitro-sandboxes-hardware-enforced-workload-isolation-on-amazon-eks": "2026-11-15",
-    "github.com/ggml-org/ggml/releases/tag/v1.0.0": "2026-11-15"
+    "github.com/ggml-org/ggml/releases/tag/v1.0.0": "2026-11-15",
+    "tensward.com/blog/gpu-busy-doing-what": "2026-11-16",
+    "jordivillar.com/blog/building-a-serverless-clickhouse": "2026-11-16",
+    "github.com/sahilg93/arm64-recompiler": "2026-11-16",
+    "mercor.com/blog/training-frontier-knowledge-work-agents-a-397b-rl-training-guide-with-skyrl": "2026-11-16",
+    "github.com/unblocked/context-engine-simulator": "2026-11-16",
+    "claude.dev/blog/what-a-task-costs-on-opus-5-5": "2026-11-16",
+    "github.com/zk4x/skamandros": "2026-11-16",
+    "hardikmeisheri.github.io/blog/musings-long-context-finetuning.html": "2026-11-16",
+    "getunblocked.com/blog/mcp-connectors-are-not-a-context-engine": "2026-11-16",
+    "arxiv.org/abs/2605.26298": "2026-11-16"
   }
 }
