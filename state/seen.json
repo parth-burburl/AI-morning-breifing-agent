@@ -189,6 +189,16 @@
     "standardkernel.com/blog/intel-gaudi2-outperforms-h100": "2026-11-19",
     "arxiv.org/abs/2611.22674": "2026-11-19",
     "permit.io/blog/oauth-on-mcp": "2026-11-19",
-    "blog.voyageai.com/2026/11/18/wayfinder-code-search": "2026-11-19"
+    "blog.voyageai.com/2026/11/18/wayfinder-code-search": "2026-11-19",
+    "github.com/kmiq/articles/blob/main/choosing-the-inference-stack-for-voice-ai.md": "2026-11-20",
+    "arxiv.org/abs/2611.23174": "2026-11-20",
+    "runway.com/news/research/real-time-video-at-batch-size-one": "2026-11-20",
+    "huggingface.co/blog/mps-pytorch-2-15": "2026-11-20",
+    "cloud.google.com/blog/products/application-development/lessons-from-building-sashiko-an-agentic-code-review-system": "2026-11-20",
+    "zenodo.org/records/24321025": "2026-11-20",
+    "techcommunity.microsoft.com/blog/microsoftusbblog/introducing-rdma-over-usb4%c2%ae-on-windows-run-larger-local-ai-models-across-pcs/4574602": "2026-11-20",
+    "tabbyml.github.io/weight-space-playground": "2026-11-20",
+    "github.com/aagam-bothara/rigtune": "2026-11-20",
+    "scrivano.org/posts/2026-11-18-velarx": "2026-11-20"
   }
 }
