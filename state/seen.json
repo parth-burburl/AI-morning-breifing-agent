@@ -229,6 +229,16 @@
     "amund.blog/modded-nanogpt-sub-30s-record-attempt": "2026-11-23",
     "github.com/chizy7/tether/blob/master/docs/replay.md": "2026-11-23",
     "github.com/janbjorge/straum": "2026-11-23",
-    "reiver.link/atproto/falsehoods-programmers-believe": "2026-11-23"
+    "reiver.link/atproto/falsehoods-programmers-believe": "2026-11-23",
+    "kudelskisecurity.com/research/sandboxing-coding-agents": "2026-11-24",
+    "nathan.rs/posts/detllm": "2026-11-24",
+    "tanstack.com/blog/tanstack-db-1.0-rc1-going-all-in-on-oracles": "2026-11-24",
+    "strandsagents.com/blog/introducing-strands-decider-v2": "2026-11-24",
+    "mbzuai-oryx.github.io/loopedwsp": "2026-11-24",
+    "huggingface.co/nari-labs/qwen3.8-27b-nariq-gguf": "2026-11-24",
+    "huggingface.co/blog/harness-adapters-at-scale": "2026-11-24",
+    "github.com/bohmian-ai/wyrd": "2026-11-24",
+    "docs.pixeldrain.com/posts/2024-03-07_network_optimizations": "2026-11-24",
+    "research.google/blog/supercharging-transformer-residual-connections": "2026-11-24"
   }
 }
