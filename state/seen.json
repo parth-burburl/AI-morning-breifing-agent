@@ -239,6 +239,16 @@
     "huggingface.co/blog/harness-adapters-at-scale": "2026-11-24",
     "github.com/bohmian-ai/wyrd": "2026-11-24",
     "docs.pixeldrain.com/posts/2024-03-07_network_optimizations": "2026-11-24",
-    "research.google/blog/supercharging-transformer-residual-connections": "2026-11-24"
+    "research.google/blog/supercharging-transformer-residual-connections": "2026-11-24",
+    "github.com/saltwater-research/seabraid": "2026-11-25",
+    "twitter.com/ahmedmm72234641/status/2124869402634129901": "2026-11-25",
+    "fastpathlabs.ai/blog/fastpath-agentic-recipe": "2026-11-25",
+    "safeguards.anthropic.com/2026/siren": "2026-11-25",
+    "astral.sh/blog/securing-from-supply-chain-attacks": "2026-11-25",
+    "github.com/caistro-labs/poros": "2026-11-25",
+    "claude.com/resources/articles/skills-over-mcp-tasks-and-more": "2026-11-25",
+    "langchain.com/blog/full-text-search-in-smithdb-designing-an-inverted-index-for-object-storage": "2026-11-25",
+    "engram.com/blog/lora-size": "2026-11-25",
+    "github.com/sam-codesai/sutradb": "2026-11-25"
   }
 }
