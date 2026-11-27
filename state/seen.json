@@ -259,6 +259,16 @@
     "huggingface.co/apple/fastframes-s": "2026-11-26",
     "adamgrant.micro.blog/2026/11/25/state-machines-are-better-than.html": "2026-11-26",
     "github.com/paramthakkar123/simulusion": "2026-11-26",
-    "ipotrick.github.io/site/blogs/practical-efficient-rendergraphs": "2026-11-26"
+    "ipotrick.github.io/site/blogs/practical-efficient-rendergraphs": "2026-11-26",
+    "progrium.github.io/minipg": "2026-11-27",
+    "devnull.land/amd-specific-llama-cpp": "2026-11-27",
+    "duplexio.ai/blog/how-we-built-duo": "2026-11-27",
+    "vllm.ai/blog/2026-11-24-vllm-gr-announcement": "2026-11-27",
+    "github.com/strml/swarm": "2026-11-27",
+    "arxiv.org/abs/2605.15156": "2026-11-27",
+    "openai.com/safety-alignment/misalignment-reports/using-peers-work-to-gain-unauthorized-access-to-openai-research-infrastructure": "2026-11-27",
+    "github.com/tensward/tensward/tree/main/examples/glm-5.3-flash-24gb": "2026-11-27",
+    "twitter.com/tencentai_news/status/2125968859450802415": "2026-11-27",
+    "lucumr.pocoo.org/2026/11/25/poisoning": "2026-11-27"
   }
 }
