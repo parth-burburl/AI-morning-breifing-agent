@@ -269,6 +269,16 @@
     "openai.com/safety-alignment/misalignment-reports/using-peers-work-to-gain-unauthorized-access-to-openai-research-infrastructure": "2026-11-27",
     "github.com/tensward/tensward/tree/main/examples/glm-5.3-flash-24gb": "2026-11-27",
     "twitter.com/tencentai_news/status/2125968859450802415": "2026-11-27",
-    "lucumr.pocoo.org/2026/11/25/poisoning": "2026-11-27"
+    "lucumr.pocoo.org/2026/11/25/poisoning": "2026-11-27",
+    "aws.amazon.com/blogs/security/secure-agentic-access-to-aws-with-enterprise-managed-authorization": "2026-11-28",
+    "cesarsotovalero.net/blog/your-model-is-a-dependency.html": "2026-11-28",
+    "newsletter.semianalysis.com/p/trainium3-inferencex": "2026-11-28",
+    "arxiv.org/abs/2608.09867": "2026-11-28",
+    "alexselzer.com/posts/large-batch-local-inference": "2026-11-28",
+    "a-r-r-o-w.github.io/blog/00006_compiling_python_to_sass": "2026-11-28",
+    "mit-han-lab.github.io/qda-blog": "2026-11-28",
+    "github.com/tony-stark2025/piton": "2026-11-28",
+    "locally.build/blog/2026-11-27/introducing-locally-for-azure-and-entra": "2026-11-28",
+    "fzakaria.com/2026/11/25/browser-tabs-as-a-container-runtime": "2026-11-28"
   }
 }
